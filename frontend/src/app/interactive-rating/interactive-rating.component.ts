@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-interactive-rating',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InteractiveRatingComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 }

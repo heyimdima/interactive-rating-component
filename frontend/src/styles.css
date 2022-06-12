@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: Overpass, sans-serif;
+    src: url(assets/fonts/Overpass-Regular.ttf);
+    font-style: normal;
+    font-weight: 400;
+};
+
+@font-face {
+    font-family: Overpass, sans-serif;
+    src: url(assets/fonts/Overpass-Bold.ttf);
+    font-style: normal;
+    font-weight: 700;
+};
