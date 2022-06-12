@@ -1,14 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
-@font-face {
-    font-family: Overpass, sans-serif;
-    src: url(assets/fonts/Overpass-Regular.ttf);
-    font-style: normal;
-    font-weight: 400;
-};
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsla(216, 12%, 54%, 0.205);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+}
 
-@font-face {
-    font-family: Overpass, sans-serif;
-    src: url(assets/fonts/Overpass-Bold.ttf);
-    font-style: normal;
-    font-weight: 700;
-};
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    background-color: hsl(216, 12%, 8%);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
