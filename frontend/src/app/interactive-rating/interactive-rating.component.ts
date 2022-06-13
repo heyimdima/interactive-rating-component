@@ -16,19 +16,19 @@ export class InteractiveRatingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onRatingEnter(buttonID: number) {
+  onButtonEnter(buttonID: number) {
     this.hoverState = buttonID;
-    console.log(this.hoverState);
+    console.log("Enter button: " + this.hoverState);
   }
 
-  onRatingLeave() {
+  onButtonLeave() {
     this.hoverState = 0;
-    console.log(this.hoverState);
+    console.log("Leave button: " + this.hoverState);
   }
 
-  onRatingClicked(buttonID: number) {
+  onButtonClick(buttonID: number) {
     this.rating = buttonID;
-    console.log(this.rating);
+    console.log("Clicked button: " + this.rating);
   }
 
 

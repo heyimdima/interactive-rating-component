@@ -10,9 +10,9 @@
       <app-rating
         [buttonID]="button"
         [rating]="hoverState || rating"
-        (ratingEnter)="onRatingEnter($event)"
-        (ratingLeave)="onRatingLeave()"
-        (ratingClicked)="onRatingClicked($event)">
+        (buttonEnter)="onButtonEnter($event)"
+        (buttonLeave)="onButtonLeave()"
+        (buttonClick)="onButtonClick($event)">
       </app-rating>
     </div>
     <button class="btn-submit">SUBMIT</button>
