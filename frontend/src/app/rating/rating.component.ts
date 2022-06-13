@@ -10,25 +10,25 @@ export class RatingComponent implements OnInit {
   @Input() buttonID!: any;
   @Input() rating!: any;
 
-  @Output() ratingEnter: EventEmitter<number> = new EventEmitter();
-  @Output() ratingLeave: EventEmitter<number> = new EventEmitter();
-  @Output() ratingClicked: EventEmitter<number> = new EventEmitter();
+  @Output() buttonEnter: EventEmitter<number> = new EventEmitter();
+  @Output() buttonLeave: EventEmitter<number> = new EventEmitter();
+  @Output() buttonClick: EventEmitter<number> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onRatingEnter() {
-    this.ratingEnter.emit(this.buttonID);
+  onButtonEnter() {
+    this.buttonEnter.emit(this.buttonID);
   }
 
-  onRatingLeave() {
-    this.ratingLeave.emit()
+  onButtonLeave() {
+    this.buttonLeave.emit()
   }
 
-  onRatingClicked() {
-    this.ratingClicked.emit(this.buttonID)
+  onButtonClick() {
+    this.buttonClick.emit(this.buttonID)
   }
 
 }
