@@ -1,0 +1,11 @@
+.button-normal {
+    background-color: aqua;
+}
+
+.button-hover {
+    background-color: blue;
+}
+
+.button-select {
+    background-color: red;
+}
