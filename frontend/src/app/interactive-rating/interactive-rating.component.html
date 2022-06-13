@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="evaluation">
+  <div *ngIf="!submitted" class="evaluation">
     <span><img src="../../assets/images/icon-star.svg" alt="icon-star" class="starbtn"></span>
     <h1 class="heading">How did we do?</h1>
     <p class="paragraph">
@@ -9,15 +9,20 @@
     <div class="buttons" [formGroup]="ratingForm">
 
       <label class="rating" *ngFor="let button of buttons" [ngClass]="{'selected': selected === button}">
-        <input formControlName="rating"
-              type="radio"
-              class="btn-circle"
-              [value]="button">
+        <input formControlName="rating" type="radio" class="btn-circle" [value]="button">
         <span class="circle">{{button}}</span>
       </label>
 
     </div>
-    <button class="btn-submit">SUBMIT</button>
+    <button class="btn-submit" (click)="onSubmit()">SUBMIT</button>
   </div>
-  <div class="thankyou"></div>
+  <div *ngIf="submitted" class="thankyou">
+    <span><img src="../../assets/images/illustration-thank-you.svg" alt="img" class="illustration"></span>
+    <p class="selected-rating">You selected {{ selected }} out of 5</p>
+    <h1 class="heading">Thank you!</h1>
+    <p class="paragraph">
+      We appreciate you taking the time to give a rating. If you ever need more support,
+      don’t hesitate to get in touch!
+    </p>
+  </div>
 </div>

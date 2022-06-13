@@ -89,4 +89,29 @@
 .btn-submit:hover {
     background-color: var(--white);
     color: var(--orange);
+    transition: background-color .1s ease-in;
+}
+
+.thankyou {
+    text-align: center;
+    align-items: center;
+}
+
+.illustration {
+    padding-top: 25px;
+}
+
+.thankyou .paragraph {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.thankyou .selected-rating {
+    color: var(--orange);
+    background-color: var(--mediumGrey);
+    border-radius: 1.5rem;
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding: 0.4rem;
 }

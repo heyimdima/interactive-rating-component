@@ -8,10 +8,13 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class InteractiveRatingComponent implements OnInit {
 
-  buttons = [1, 2, 3, 4, 5];
   public ratingForm: FormGroup = new FormGroup({
     rating: new FormControl()
   });
+
+  buttons = [1, 2, 3, 4, 5];
+
+  submitted: boolean = false;
 
   get selected(): number {
     return this.ratingForm.get('rating')?.value as number;
@@ -20,9 +23,10 @@ export class InteractiveRatingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.ratingForm.valueChanges.subscribe(change => {
-      console.log(change)
-    })
+  }
+
+  onSubmit(): void {
+    this.submitted = true;
   }
 
 }
