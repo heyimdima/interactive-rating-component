@@ -6,14 +6,16 @@
       Please let us know how we did with your support request. All feedback is appreciated
       to help us improve our offering!
     </p>
-    <div class="btn-container" *ngFor="let button of buttons">
-      <app-rating
-        [buttonID]="button"
-        [rating]="hoverState || rating"
-        (ratingEnter)="onRatingEnter($event)"
-        (ratingLeave)="onRatingLeave()"
-        (ratingClicked)="onRatingClicked($event)">
-      </app-rating>
+    <div class="buttons" [formGroup]="ratingForm">
+
+      <label class="rating" *ngFor="let button of buttons" [ngClass]="{'selected': selected === button}">
+        <input formControlName="rating"
+              type="radio"
+              class="btn-circle"
+              [value]="button">
+        <span class="circle">{{button}}</span>
+      </label>
+
     </div>
     <button class="btn-submit">SUBMIT</button>
   </div>
