@@ -30,6 +30,7 @@
 .buttons {
     justify-content: space-between;
     display: flex;
+    flex-direction: row;
     padding-top: 1rem;
 }
 
@@ -39,22 +40,33 @@
     padding: 1em;
 }
 
+.rating {
+    cursor: pointer;
+}
 
-.btn-circle {
-    border: 0px;
+.rating input {
+    display: none;
+}
+
+.rating .circle {
     background-color: var(--mediumGrey);
     border-radius: 50%;
     height: 3rem;
     width: 3rem;
     color: hsl(217, 12%, 63%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .1s ease-in;
+    font-weight: 700;
 }
 
-.btn-circle:hover {
+.rating .circle:hover {
     background-color: var(--lightGrey);
     color: var(--white);
 }
 
-.btn-circle:active {
+.rating.selected .circle {
     background-color: var(--orange);
     color: var(--white);
 }

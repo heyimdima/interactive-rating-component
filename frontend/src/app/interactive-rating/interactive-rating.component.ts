@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-interactive-rating',
@@ -8,34 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class InteractiveRatingComponent implements OnInit {
 
   buttons = [1, 2, 3, 4, 5];
-  rating = 0;
-  hoverState = 0;
+  public ratingForm: FormGroup = new FormGroup({
+    rating: new FormControl()
+  });
+
+  get selected(): number {
+    return this.ratingForm.get('rating')?.value as number;
+  }
 
   constructor() { }
 
   ngOnInit(): void {
+    this.ratingForm.valueChanges.subscribe(change => {
+      console.log(change)
+    })
   }
-
-  onButtonEnter(buttonID: number) {
-    this.hoverState = buttonID;
-    console.log("Enter button: " + this.hoverState);
-  }
-
-  onButtonLeave() {
-    this.hoverState = 0;
-    console.log("Leave button: " + this.hoverState);
-  }
-
-  onButtonClick(buttonID: number) {
-    this.rating = buttonID;
-    console.log("Clicked button: " + this.rating);
-  }
-
-
-
-
-
-
-
 
 }
