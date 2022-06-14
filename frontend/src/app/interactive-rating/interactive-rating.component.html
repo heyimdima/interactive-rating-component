@@ -1,6 +1,6 @@
 <div class="container">
   <div *ngIf="!submitted" class="evaluation">
-    <span><img src="../../assets/images/icon-star.svg" alt="icon-star" class="starbtn"></span>
+    <span><img src="assets/images/icon-star.svg" alt="icon-star" class="starbtn"></span>
     <h1 class="heading">How did we do?</h1>
     <p class="paragraph">
       Please let us know how we did with your support request. All feedback is appreciated
@@ -17,7 +17,7 @@
     <button class="btn-submit" (click)="onSubmit()" [disabled]="!selected">SUBMIT</button>
   </div>
   <div *ngIf="submitted" class="thankyou">
-    <span><img src="../../assets/images/illustration-thank-you.svg" alt="img" class="illustration"></span>
+    <span><img src="assets/images/illustration-thank-you.svg" alt="img" class="illustration"></span>
     <p class="selected-rating">You selected {{ selected }} out of 5</p>
     <h1 class="heading">Thank you!</h1>
     <p class="paragraph">
