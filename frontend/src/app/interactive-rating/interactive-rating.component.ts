@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-interactive-rating',
@@ -9,7 +9,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class InteractiveRatingComponent implements OnInit {
 
   public ratingForm: FormGroup = new FormGroup({
-    rating: new FormControl()
+    rating: new FormControl('', Validators.required)
   });
 
   buttons = [1, 2, 3, 4, 5];

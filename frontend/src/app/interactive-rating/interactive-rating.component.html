@@ -14,7 +14,7 @@
       </label>
 
     </div>
-    <button class="btn-submit" (click)="onSubmit()">SUBMIT</button>
+    <button class="btn-submit" (click)="onSubmit()" [disabled]="!selected">SUBMIT</button>
   </div>
   <div *ngIf="submitted" class="thankyou">
     <span><img src="../../assets/images/illustration-thank-you.svg" alt="img" class="illustration"></span>
