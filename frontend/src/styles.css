@@ -6,12 +6,12 @@
     --mediumGrey: hsla(216, 12%, 54%, 0.205);
     --darkBlue: hsl(213, 19%, 18%);
     --veryDarkBlue: hsl(216, 12%, 8%);
-};
+}
 
 html,
 body {
     height: 100%;
-};
+}
 
 body {
     font-family: 'Overpass', sans-serif;
@@ -21,14 +21,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-};
+}
 
 .attribution {
     font-size: 11px;
     text-align: center;
     color: white
-};
+}
 
 .attribution a {
     color: hsl(228, 45%, 44%);
-};
+}
